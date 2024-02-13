@@ -15,16 +15,19 @@ class CustomUser(AbstractUser):
     )
     first_name = models.CharField(
         max_length=35,
-        null=False,
+        null=True,
+        blank=True,
         help_text='Имя пользователя'
     )
     last_name = models.CharField(
         max_length=35,
-        null=False,
+        null=True,
+        blank=True,
         help_text='Фамилия пользователя'
     )
     email = models.EmailField(
         blank=True,
+        null=False,
         help_text='Email пользователя'
     )
     sex = models.CharField(
