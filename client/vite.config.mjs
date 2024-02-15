@@ -42,9 +42,19 @@ export default defineConfig({
         ],
     },
     build: {
-        outDir: '../play_pulse/static', // Путь к папке static
+        outDir: fileURLToPath(new URL('../play_pulse/static/dist', import.meta.url)), // Абсолютный путь к папке static
+        assetsDir: '', // Очистить assetsDir, чтобы не добавлять хэш в имена файлов
+        emptyOutDir: true, // Очищать outDir перед каждой сборкой
+        rollupOptions: {
+            output: {
+                entryFileNames: '[name].js', // Здесь [name] будет заменено на имя вашего входного файла
+                chunkFileNames: '[name].js', // Здесь [name] будет заменено на имя чанка файла
+                assetFileNames: '[name][extname]', // Здесь [name] будет заменено на имя файла ресурса
+            },
+        },
     },
     server: {
         port: 3000,
     },
+    base: './',
 })

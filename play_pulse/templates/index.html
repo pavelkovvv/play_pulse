@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'assets/index-C-LdzboF.css' %}">
+    {% if DEBUG %}
+        <script src="{% static 'dev/index.js' %}" defer></script>
+        <link rel="stylesheet" href="{% static 'dev/index.css' %}">
+    {% else %}
+        <script src="{% static 'dist/index.js' %}" defer></script>
+        <link rel="stylesheet" href="{% static 'dist/index.css' %}">
+    {% endif %}
     <title>Your Django-Vue App</title>
 </head>
 <body>
     <div id="app"></div>
-    <script src="{% static 'assets/index-BFq4mBJQ.js' %}"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.0.0",
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS='--no-warnings' vite",
+    "dev": "vite build --watch --emptyOutDir --outDir=../play_pulse/static/dev",
     "build": "vite build",
     "preview": "vite preview"
   },
