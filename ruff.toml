@@ -1,0 +1,90 @@
+# Поддержка Python 3.10+ версий
+target-version = "py310"
+
+# Максимальная длина строки
+line-length = 100
+
+# Видеть предупреждения о неправильном коде
+show-fixes = true
+
+# Каталоги, которые нужно исключить из проверки
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    ".idea",
+]
+
+# Расширение файлов, которые необходимо проверять линтером
+include = ["*.py"]
+
+# Настроки подсветки линтера ruff
+[lint]
+
+select = [
+    "E",   # Правила pycodestyle
+    "F",   # Правила Pyflakes
+    "UP",  # Правила pyupgrade
+    "D",   # Правила docstrings
+    "B",   # Правила flake8-bugbear
+    "SIM", # Правила flake8-simplify
+    "I",   # Правила isort
+    "N",   # Правила pep8-naming
+    "DJ",  # Правила Django
+    "T20", # Обнаружение print и pprint
+    "PT",  # Правила для pytest
+    "ARG", # Поиск неиспользуемых аргументов
+    "TD",  # Правила написания TODO
+    "FIX", # Поиск TODO и FIXME
+    "ERA", # Поиск закомментированного кода
+]
+
+# Игнорируемые типы ошибок
+ignore = [
+    "D100", "D101", "D107",
+]
+
+# Разрешить использовать переменные, начинающиеся с нижнего символа подчёркивания
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+
+# Правила при автоматическом форматировании кода линтером ruff
+[format]
+
+# Исправление кавычек
+quote-style = "single"
+
+# Что используется в качестве отсупа
+indent-style = "space"
+
+# Форматирование кода строки документации
+docstring-code-format = true
+
+# Максимальная длина строки документации
+docstring-code-line-length = 100
+
+# Автоматическое определение окончания строки
+line-ending = "auto"
