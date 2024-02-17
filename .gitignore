@@ -154,3 +154,5 @@ cython_debug/
 
 # IDE settings
 .idea/
+
+yarn.lock
