@@ -9,6 +9,7 @@ show-fixes = true
 
 # Каталоги, которые нужно исключить из проверки
 exclude = [
+    "migrations",
     ".bzr",
     ".direnv",
     ".eggs",
