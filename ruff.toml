@@ -2,7 +2,7 @@
 target-version = "py310"
 
 # Максимальная длина строки
-line-length = 100
+line-length = 200
 
 # Видеть предупреждения о неправильном коде
 show-fixes = true
@@ -46,19 +46,19 @@ include = ["*.py"]
 [lint]
 
 select = [
-    "E",   # Правила pycodestyle
-    "F",   # Правила Pyflakes
-    "UP",  # Правила pyupgrade
-    "D",   # Правила docstrings
-    "B",   # Правила flake8-bugbear
+    "E", # Правила pycodestyle
+    "F", # Правила Pyflakes
+    "UP", # Правила pyupgrade
+    "D", # Правила docstrings
+    "B", # Правила flake8-bugbear
     "SIM", # Правила flake8-simplify
-    "I",   # Правила isort
-    "N",   # Правила pep8-naming
-    "DJ",  # Правила Django
+    "I", # Правила isort
+    "N", # Правила pep8-naming
+    "DJ", # Правила Django
     "T20", # Обнаружение print и pprint
-    "PT",  # Правила для pytest
+    "PT", # Правила для pytest
     "ARG", # Поиск неиспользуемых аргументов
-    "TD",  # Правила написания TODO
+    "TD", # Правила написания TODO
     "FIX", # Поиск TODO и FIXME
     "ERA", # Поиск закомментированного кода
 ]
