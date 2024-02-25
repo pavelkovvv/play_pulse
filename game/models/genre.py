@@ -4,8 +4,18 @@ from django.db import models
 class Genre(models.Model):
     """Модель жанра."""
 
-    genre = models.CharField(unique=True, max_length=255, null=False, help_text="Название жанра", verbose_name="Жанр")
-    description = models.TextField(blank=True, help_text="Подробное описание жанра", verbose_name="Описание")
+    genre = models.CharField(
+        unique=True,
+        max_length=255,
+        null=False,
+        help_text="Название жанра",
+        verbose_name="Жанр"
+    )
+    description = models.TextField(
+        blank=True,
+        help_text="Подробное описание жанра",
+        verbose_name="Описание"
+    )
 
     class Meta:
         """Метаинформация для данной модели."""
