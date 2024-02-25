@@ -2,7 +2,7 @@
 target-version = "py310"
 
 # Максимальная длина строки
-line-length = 100
+line-length = 200
 
 # Видеть предупреждения о неправильном коде
 show-fixes = true
