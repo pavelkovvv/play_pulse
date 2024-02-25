@@ -1,1 +1,1 @@
-default_app_config = "game.apps.MyAppConfig"
+default_app_config = "user_communication.apps.MyAppConfig"

@@ -9,31 +9,39 @@ class Comment(models.Model):
 
     user = models.ForeignKey(
         CustomUser,
-        related_name='comment_user',
+        related_name="comment_user",
         on_delete=models.PROTECT,
-        help_text='Связь комментария с пользователем',
-        verbose_name='Пользователь',
+        help_text="Связь комментария с пользователем",
+        verbose_name="Пользователь",
     )
     game = models.ForeignKey(
         Game,
-        related_name='comment_game',
+        related_name="comment_game",
         on_delete=models.PROTECT,
-        help_text='Связь комментария с игрой',
-        verbose_name='Игра',
+        help_text="Связь комментария с игрой",
+        verbose_name="Игра",
     )
-    comment_text = models.TextField(help_text='Текст коммментария', verbose_name='Комментарий')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    comment_text = models.TextField(
+        help_text="Текст комментария",
+        verbose_name="Комментарий",
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+    )
 
     class Meta:
-        """Человекочитаемое название для экземпляра модели."""
+        """Метаданные о данной модели."""
 
-        verbose_name = 'Комментарий'
-        verbose_name_plural = 'Комментарии'
+        verbose_name = "Комментарий"
+        verbose_name_plural = "Комментарии"
 
     def __str__(self):
         """Возвращает строковое представление объекта.
 
         :return Строковое преставление объекта
         """
-        return f'{self.game} - {self.user}'
+
+        return f"{self.game} - {self.user}"
