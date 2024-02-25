@@ -4,7 +4,13 @@ from django.db import models
 class Game(models.Model):
     """Модель игры."""
 
-    game = models.CharField(unique=True, max_length=255, null=False, help_text="Название игры", verbose_name="Игра")
+    game = models.CharField(
+        unique=True,
+        max_length=255,
+        null=False,
+        help_text="Название игры",
+        verbose_name="Игра"
+    )
     game_studio = models.ForeignKey(
         "StudioDeveloper",
         related_name="studio_game",
