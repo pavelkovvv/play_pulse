@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex justify-start">
     <template v-for="button in navigationButtons">
-      <v-btn variant="text">
+      <v-btn rounded variant="text">
         {{ button.name }}
       </v-btn>
     </template>

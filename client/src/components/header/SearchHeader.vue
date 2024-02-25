@@ -1,10 +1,13 @@
 <template>
   <div class="search">
     <v-text-field
+      class="search-field"
       label="Поиск"
       prepend-inner-icon="mdi-magnify"
       density="compact"
       variant="outlined"
+      rounded
+      bg-color="rgba(0, 202, 111, 0.08)"
     ></v-text-field>
   </div>
 </template>
@@ -20,11 +23,11 @@ export default {
   width: 30%;
 }
 
-.v-input >>> .v-input__details {
-  grid-area: initial !important;
+.search-field {
 }
 
-.v-text-field {
-  border-radius: 10px !important;
+.v-input >>> .v-input__details {
+  grid-area: initial !important;
+  display: none !important;
 }
 </style>
