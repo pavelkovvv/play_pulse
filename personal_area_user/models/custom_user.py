@@ -24,8 +24,8 @@ class CustomUser(AbstractUser):
         help_text="Является ли пользователь администратором",
         verbose_name="Флаг наличия прав администратора",
     )
-    is_active = models.BooleanField(
-        default=True,
+    is_online = models.BooleanField(
+        default=False,
         help_text="Онлайн пользователь или нет",
         verbose_name="Флаг наличия онлайна пользователя",
     )
